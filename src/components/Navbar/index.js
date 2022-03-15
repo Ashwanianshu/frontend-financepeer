@@ -2,11 +2,13 @@ import {Component} from 'react'
 import {withRouter, Link} from 'react-router-dom'
 import Cookies from 'js-cookie'
 
+import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+
 import './index.css'
 
 class Navbar extends Component {
   onClickLogout = () => {
-    const {history} = this.propss
+    const {history} = this.props
     Cookies.remove('jwt_token')
     history.replace('/login')
   }

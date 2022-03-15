@@ -14,7 +14,21 @@ class Home extends Component {
   }
 
   handleChange = event => {
-    console.log('issues')
+    const fileReader = new FileReader()
+    fileReader.readAsText(event.target.files[0], 'UTF-8')
+    fileReader.onload = e => {
+      let jsonData
+      try {
+        jsonData = JSON.parse(e.target.result)
+        this.setState({
+          blogData: jsonData,
+          isFileChosen: true,
+          error: false,
+        })
+      } catch (error) {
+        this.setState({error: true})
+      }
+    }
   }
 
   sendJsonBlogData = async () => {
@@ -29,7 +43,7 @@ class Home extends Component {
       },
     }
     const response = await fetch(
-      'https://sai-nodejs-finance.herokuapp.com/saveblogs/',
+      'https://financepeer-assignment.herokuapp.com/saveblogs/',
       options,
     )
     if (response.ok === true) {
@@ -37,21 +51,21 @@ class Home extends Component {
     } else {
       this.setState({isLoading: false, successMsg: false, failureMsg: true})
     }
-
-    console.log(response)
-    console.log('received')
   }
 
   render() {
     const {error, isFileChosen, isLoading, successMsg, failureMsg} = this.state
-    console.log('Blog ')
     return (
       <>
         <Navbar />
         <div className="bg-home-container">
           <div className="home-section-main-container">
             <h1>Add File</h1>
-            <input type="file" onChange={() => console.log('heyyy')} />
+            <input
+              type="file"
+              onChange={this.handleChange}
+              accept="application/JSON"
+            />
             <br />
             {error && (
               <p className="error-home">please choose the correct json file</p>

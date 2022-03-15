@@ -1,8 +1,9 @@
 import {Component} from 'react'
-import Cookies from 'js-cookie'
-import Navbar from '../Navbar'
-import BlogElements from '../BlogElements'
 import './index.css'
+import Cookies from 'js-cookie'
+import ClipLoader from 'react-spinners/ClipLoader'
+import BlogElements from '../BlogElements'
+import Navbar from '../Navbar'
 
 class BlogsData extends Component {
   state = {
@@ -27,25 +28,20 @@ class BlogsData extends Component {
       method: 'GET',
     }
     const response = await fetch(apiUrl, options)
-    console.log(response)
     const data = await response.json()
-    if (response.ok === true) {
-      this.setState({blogData: data, isLoading: false})
-    } else {
-      console.log('asjhdgahjdgahgdhjasgdhjasgdhjag')
-    }
+    this.setState({blogData: data, isLoading: false})
   }
 
   render() {
     const {blogData, isLoading} = this.state
-    console.log('Blog ')
+    console.log(blogData)
     return (
       <>
         <Navbar />
         <div className="bg-blogs-container">
           <ul className="blogs-ul-container">
             {isLoading ? (
-              <h1>dsfhkjsdhfdjsfs</h1>
+              <ClipLoader color="#000000" size={50} />
             ) : (
               blogData.map(eachBlog => (
                 <BlogElements itemData={eachBlog} key={eachBlog.id} />
