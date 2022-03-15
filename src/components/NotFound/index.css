@@ -1,115 +1,113 @@
 /* Write your CSS here */
 .not-found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+@media screen and (max-width: 768px) {
+  .not-found-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
   }
-  @media screen and (max-width: 768px) {
-    .not-found-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+}
+.not-found-container-small-pic {
+  width: 80%;
+  height: 400px;
+  width: 600px;
+}
+@media screen and (max-width: 768px) {
+  .not-found-container-small-pic {
+    height: 151.00146484375px;
+    width: 225px;
+    border-radius: 0px;
   }
-  .not-found-container-small-pic{
-    width: 80%;
-    height: 400px;
-    width: 600px;
-  }
-  @media screen and (max-width: 768px){
-    .not-found-container-small-pic {
-      height: 151.00146484375px;
-      width: 225px;
-      border-radius: 0px;
-    }
-  }
-  
+}
+
+.not-found-heading {
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #334155;
+}
+@media screen and (max-width: 768px) {
   .not-found-heading {
-    font-family: Inter;
-    font-size: 32px;
+    font-family: Roboto;
+    font-size: 18px;
     font-style: normal;
     font-weight: 500;
-    line-height: 48px;
+    line-height: 24px;
     letter-spacing: 0em;
     text-align: center;
     color: #334155;
   }
-  @media screen and (max-width: 768px){
-    .not-found-heading{
-      font-family: Roboto;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 24px;
-      letter-spacing: 0em;
-      text-align: center;
-      color: #334155;
-    }
-  }
+}
+.not-found-content {
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #475569;
+  width: 500px;
+}
+@media screen and (max-width: 768px) {
   .not-found-content {
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 32px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: #475569;
-    width: 500px;
-  }
-  @media screen and (max-width: 768px){
-    .not-found-content {
-      font-family: Inter;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 24px;
-      letter-spacing: 0em;
-      text-align: center;
-      color: #475569;
-      width: 70%;
-    }
-  }
-  .not-found-button {
-    height: 48px;
-    width: 164px;
-    border-radius: 12px;
-    border: none;
-    padding: 12px, 24px, 12px, 24px;
-    background-color: #0284c7;
     font-family: Inter;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0em;
+    text-align: center;
+    color: #475569;
+    width: 70%;
   }
-  @media screen and (max-width: 768px){
-  
-    .not-found-button {
-      height: 32px;
-      width: 132px;
-      left: 0px;
-      top: 0px;
-      border-radius: 8px;
-      padding: 8px, 16px, 8px, 16px;
-      background-color: #0284c7;
-      border: none;
-      font-family: Inter;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 16px;
-      letter-spacing: 0em;
-      color: white;
-    }
+}
+.not-found-button {
+  height: 48px;
+  width: 164px;
+  border-radius: 12px;
+  border: none;
+  padding: 12px, 24px, 12px, 24px;
+  background-color: #0284c7;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+@media screen and (max-width: 768px) {
+  .not-found-button {
+    height: 32px;
+    width: 132px;
+    left: 0px;
+    top: 0px;
+    border-radius: 8px;
+    padding: 8px, 16px, 8px, 16px;
+    background-color: #0284c7;
+    border: none;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    color: white;
   }
-  .not-found-link {
-    color: #ffffff;
-    text-decoration: none;
-  }
-  
+}
+.not-found-link {
+  color: #ffffff;
+  text-decoration: none;
+}
