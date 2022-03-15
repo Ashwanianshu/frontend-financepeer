@@ -1,0 +1,48 @@
+.bg-home-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 100px;
+    background-color: #e9f7e9;
+    min-height: 100vh;
+    align-items: center;
+  }
+  .home-section-main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 300px;
+min-width:600px ;
+    background-color: white;
+    border-radius: 12px;
+  }
+  .home-submit-button {
+    width: 120px;
+    height: 36px;
+    margin-top: 32px;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    background-color: #0284C7;
+  }
+  .error-home {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    padding: 15px 24px;
+    border-radius: 7px;
+  }
+  .error-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    padding: 15px 24px;
+  }
+  .file-input-class{
+    margin-top: 20px;
+    margin-left: 100px;
+  }

@@ -1,0 +1,13 @@
+.bg-blogs-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 100px;
+    background-color: #e9f7e9;
+    min-height: 100vh;
+    align-items: center;
+}
+.blogs-ul-container{
+    padding: 0;
+    list-style-type: none;
+}
